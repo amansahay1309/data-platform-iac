@@ -6,7 +6,6 @@ on:
 
 jobs:
   cxone-iac-scan:
-    if: github.repository == 'monadontsona-cloud/data-platform-iac'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
