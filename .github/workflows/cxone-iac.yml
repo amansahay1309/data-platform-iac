@@ -45,7 +45,6 @@ jobs:
             --client-secret "$CX_CLIENT_SECRET" \
             --branch "main" \
             --project-name "${{ secrets.CX_PROJECT_NAME }}" \
-            --async \
             --report-format sarif \
             --output-name cx-iac-source \
             --output-path .
@@ -110,7 +109,6 @@ jobs:
             --client-secret "$CX_CLIENT_SECRET" \
             --branch "main" \
             --project-name "${{ secrets.CX_PROJECT_NAME }}" \
-            --async \
             --report-format sarif \
             --output-name cx-iac-plan \
             --output-path .
