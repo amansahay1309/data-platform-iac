@@ -103,7 +103,7 @@ jobs:
           CX_CLIENT_SECRET: ${{ secrets.CX_CLIENT_SECRET }}
         run: |
           ./cx scan create \
-            --file-source "tfplan.json" \
+            -s "tfplan.json" \
             --scan-types "iac-Security" \
             --base-uri "https://fistage.cxone.cloud" \
             --tenant "fistage" \
