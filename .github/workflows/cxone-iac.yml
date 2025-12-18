@@ -39,7 +39,7 @@ jobs:
           ./cx scan create \
             --file-source "$GITHUB_WORKSPACE/" \
             --scan-types "iac-Security" \
-            --iac-preset "23f5ae6f-2559-4490-98f0-fc0581d21823"
+            --iac-security-preset-id "23f5ae6f-2559-4490-98f0-fc0581d21823"
             --base-uri "https://fistage.cxone.cloud" \
             --tenant "fistage" \
             --client-id "$CX_CLIENT_ID" \
@@ -107,7 +107,7 @@ jobs:
           ./cx scan create \
             -s "terraform/plan" \
             --scan-types "iac-Security" \
-            --iac-preset "23f5ae6f-2559-4490-98f0-fc0581d21823"
+            --iac-security-preset-id "23f5ae6f-2559-4490-98f0-fc0581d21823"
             --base-uri "https://fistage.cxone.cloud" \
             --tenant "fistage" \
             --client-id "$CX_CLIENT_ID" \
