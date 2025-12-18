@@ -24,7 +24,7 @@ jobs:
           node-version: '20'
 
       - name: Run CxOne IaC scan (source)
-        uses: Checkmarx/ast-github-action@v1
+        uses: Checkmarx/ast-github-action@main
         env:
           CX_BASE_URI: ${{ secrets.CX_BASE_URI }}
           CX_API_KEY:  ${{ secrets.CX_API_KEY }}
