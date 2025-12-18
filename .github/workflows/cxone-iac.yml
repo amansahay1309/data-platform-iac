@@ -34,7 +34,7 @@ jobs:
           # --- Scan configuration ---
           project_name:   ${{ secrets.CX_PROJECT_NAME }}
           branch:         ${{ github.head_ref }}
-          scan_types:     IAC                # IaC scanner
+          scan_types:     iac-security                # IaC scanner
           file_source:    .                  # scan repository root
 
           # --- Results output (for GitHub Code Scanning) ---
@@ -89,7 +89,7 @@ jobs:
           # --- Plan scan inputs ---
           project_name:   ${{ secrets.CX_PROJECT_NAME }}
           branch:         ${{ github.head_ref }}
-          scan_types:     IAC
+          scan_types:     iac-security
           file_source:    tfplan.json
 
           # --- Results output ---
