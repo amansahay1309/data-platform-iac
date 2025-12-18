@@ -87,8 +87,8 @@ jobs:
         working-directory: terraform
         run: |
           terraform init -input=false
-          terraform plan -input=false -out=tfplan.binary
-          terraform show -json tfplan.binary > tfplan.json
+          terraform plan -input=false -out=plan/tfplan.binary
+          terraform show -json plan/tfplan.binary > plan/tfplan.json
 
       - name: Download Checkmarx AST CLI (Linux)
         run: |
@@ -103,7 +103,7 @@ jobs:
           CX_CLIENT_SECRET: ${{ secrets.CX_CLIENT_SECRET }}
         run: |
           ./cx scan create \
-            -s "tfplan.json" \
+            -s "terraform/plan" \
             --scan-types "iac-Security" \
             --base-uri "https://fistage.cxone.cloud" \
             --tenant "fistage" \
