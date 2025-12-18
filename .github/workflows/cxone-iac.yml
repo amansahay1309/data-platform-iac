@@ -84,6 +84,7 @@ jobs:
 
       # Create a terraform plan file that CxOne can scan
       - name: Terraform init & plan
+        working-directory: terraform
         run: |
           terraform init -input=false
           terraform plan -input=false -out=tfplan.binary
