@@ -86,6 +86,7 @@ jobs:
       - name: Terraform init & plan
         working-directory: terraform
         run: |
+          mkdir -p plan
           terraform init -input=false
           terraform plan -input=false -out=plan/tfplan.binary
           terraform show -json plan/tfplan.binary > plan/tfplan.json
@@ -103,7 +104,7 @@ jobs:
           CX_CLIENT_SECRET: ${{ secrets.CX_CLIENT_SECRET }}
         run: |
           ./cx scan create \
-            -s "terraform/plan" \
+            -s "plan" \
             --scan-types "iac-Security" \
             --base-uri "https://fistage.cxone.cloud" \
             --tenant "fistage" \
