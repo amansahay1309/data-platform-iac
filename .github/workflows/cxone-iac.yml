@@ -42,7 +42,7 @@ jobs:
           output_filename: cx-iac-source.sarif
 
       - name: Upload SARIF (source)
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: cx-iac-source.sarif
 
@@ -97,6 +97,6 @@ jobs:
           output_filename: cx-iac-plan.sarif
 
       - name: Upload SARIF (plan)
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: cx-iac-plan.sarif
