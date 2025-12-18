@@ -45,9 +45,9 @@ jobs:
             --client-secret "$CX_CLIENT_SECRET" \
             --branch "main" \
             --project-name "${{ secrets.CX_PROJECT_NAME }}" \
-            --async=false
+            --async=false \
             --report-format sarif \
-            --output-name cx-iac-source.sarif \
+            --output-name cx-iac-source \
             --output-path .
       
       - name: Verify SARIF exists
@@ -110,6 +110,7 @@ jobs:
             --client-secret "$CX_CLIENT_SECRET" \
             --branch "main" \
             --project-name "${{ secrets.CX_PROJECT_NAME }}" \
+            --async=false \
             --report-format sarif \
             --output-name cx-iac-plan \
             --output-path .
