@@ -32,7 +32,7 @@ jobs:
           cx_tenant:      ${{ secrets.CX_TENANT }}
           cx_client_id:   ${{ secrets.CX_CLIENT_ID }}
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
-          additional_params: --scan-types iac -s . --report-format sarif --output-name cx-iac-source.sarif --output-path .
+          additional_params: --scan-types iac-security -s . --report-format sarif --output-name cx-iac-source.sarif --output-path .
 
           # --- Scan configuration ---
           project_name:   ${{ secrets.CX_PROJECT_NAME }}
@@ -86,6 +86,7 @@ jobs:
           cx_client_id:   ${{ secrets.CX_CLIENT_ID }}
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
           additional_params: --scan-types iac -s tfplan.json --report-format sarif --output-name cx-iac-plan.sarif --output-path .
+          scan_types: iac-security
 
           # --- Plan scan inputs ---
           project_name:   ${{ secrets.CX_PROJECT_NAME }}
