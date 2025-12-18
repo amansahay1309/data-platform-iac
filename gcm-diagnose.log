@@ -1,0 +1,195 @@
+﻿Diagnose log at 2025-12-10T15:49:52Z
+
+Executable: C:\Program Files\Git\mingw64\bin\git-credential-manager-core.exe
+Version: 2.0.696+4365b917da
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 22631)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\e5754808
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DS-INDIA-SARE2O
+UATDATA=C:\windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\e5754808\OneDrive
+WT_PROFILE_ID={0caa0dad-35be-5f56-a8ff-afceeeaa6101}
+TMP=C:\Users\e5754808\AppData\Local\Temp
+HOME=C:\Users\e5754808
+PROCESSOR_REVISION=4401
+USERDOMAIN=FNFIS
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+TEMP=C:\Users\e5754808\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\e5754808\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+__PSLockDownPolicy=0
+COLORTERM=truecolor
+USERDNSDOMAIN=FNFIS.COM
+BPPDOMAIN_MANAGER_ASM=EdrDotNet, Version+130.0.0.0, Culture+neutral, PublicKeyToken+da1b3922653ea916
+ProgramFiles(x86)=C:\Program Files (x86)
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\e5754808\bin;C:\Program Files\Python312\Scripts\;C:\Program Files\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Go\bin;C:\Users\e5754808\AppData\Local\Microsoft\WindowsApps;C:\Users\e5754808\AppData\Local\Programs\Microsoft VS Code\bin
+PROCESSOR_LEVEL=25
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD
+TMPDIR=C:\Users\e5754808\AppData\Local\Temp
+PROMPT=$P$G
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+NUMBER_OF_PROCESSORS=16
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+WT_SESSION=cc6168d5-6cde-4d03-920b-d339b238bbe3
+WSLENV=WT_SESSION:WT_PROFILE_ID:
+PLINK_PROTOCOL=ssh
+ProgramData=C:\ProgramData
+ProgramW6432=C:\Program Files
+ProgramFiles=C:\Program Files (x86)
+SystemRoot=C:\windows
+SESSIONNAME=Console
+LC_CTYPE=C.UTF-8
+CommonProgramW6432=C:\Program Files\Common Files
+LOGONSERVER=\\SDCBFISBDOC11
+USERPROFILE=C:\Users\e5754808
+USERDOMAIN_ROAMINGPROFILE=FNFIS
+APPDATA=C:\Users\e5754808\AppData\Roaming
+HOMEDRIVE=C:
+USERNAME=e5754808
+PROCESSOR_ARCHITEW6432=AMD64
+PROCESSOR_ARCHITECTURE=x86
+OS=Windows_NT
+ComSpec=C:\windows\system32\cmd.exe
+BPPDOMAIN_MANAGER_TYPE=EdrDotNet.EdrAppDomainManager
+SystemDrive=C:
+windir=C:\windows
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\e5754808\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\e5754808\AppData\Local\Temp\23d745b39ea937471094a1fd'... OK
+Reading from temporary file 'C:\Users\e5754808\AppData\Local\Temp\23d745b39ea937471094a1fd'... OK
+Deleting temporary file 'C:\Users\e5754808\AppData\Local\Temp\23d745b39ea937471094a1fd'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\e5754808
+UserDataDirectoryPath: C:\Users\e5754808\.gcm
+GetCurrentDirectory(): C:\Users\e5754808\Iac-Integration\data-platform-iac
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking basic networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:61718/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+Testing with IHttpClientFactory created HTTP client...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:61720/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.36.1.windows.1'
+Locating current repository... OK
+Git repository at 'C:/Users/e5754808/Iac-Integration/data-platform-iac/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager-core
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/e5754808/.gitconfig	http.sslverify=false
+file:C:/Users/e5754808/.gitconfig	user.name=amansahay1309
+file:C:/Users/e5754808/.gitconfig	user.email=amansahay1309@gmail.com
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/amansahay1309/data-platform-iac.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker not supported.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\e5754808\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\e5754808\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
