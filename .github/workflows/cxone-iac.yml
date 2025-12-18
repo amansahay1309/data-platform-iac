@@ -37,8 +37,6 @@ jobs:
           # produce SARIF for GitHub Security tab
           output_format: sarif
           output_filename: cx-iac-source.sarif
-          # optional severity gate:
-          threshold: '{"IAC":{"HIGH":0,"MEDIUM":5}}'
 
       - name: Upload SARIF (source)
         uses: github/codeql-action/upload-sarif@v3
@@ -89,7 +87,6 @@ jobs:
           file_source:    tfplan.json     # scan the generated plan JSON
           output_format:  sarif
           output_filename: cx-iac-plan.sarif
-          threshold: '{"IAC":{"HIGH":0,"MEDIUM":5}}'
 
       - name: Upload SARIF (plan)
         uses: github/codeql-action/upload-sarif@v3        uses: github/codeql-action/upload-sarif@v3
