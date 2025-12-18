@@ -25,23 +25,18 @@ jobs:
           node-version: '20'
 
       - name: Run CxOne IaC scan (source)
-        uses: Checkmarx/ast-github-action@main
+        uses: checkmarx/ast-github-action@8e887bb93dacc44e0f5b64ee2b06d5815f89d4fc
         with:
           # --- Auth & endpoint (OAuth) ---
           base_uri:       ${{ secrets.CX_BASE_URI }}
           cx_tenant:      ${{ secrets.CX_TENANT }}
           cx_client_id:   ${{ secrets.CX_CLIENT_ID }}
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          additional_params: --scan-types iac-security -s . --report-format sarif --output-name cx-iac-source.sarif --output-path .
 
           # --- Scan configuration ---
           project_name:   ${{ secrets.CX_PROJECT_NAME }}
-          branch:         ${{ github.head_ref }}
-          scan_types:     iac-security                # IaC scanner
           file_source:    .                  # scan repository root
-
-          # --- Results output (for GitHub Code Scanning) ---
-          output_format:   sarif
-          output_filename: cx-iac-source.sarif
       
       - name: Verify SARIF exists
         run: ls -la cx-iac-source.sarif || (echo "SARIF missing" && exit 1)
@@ -83,19 +78,17 @@ jobs:
           terraform show -json tfplan.binary > tfplan.json
 
       - name: Run CxOne IaC scan (Terraform plan)
-        uses: Checkmarx/ast-github-action@main
+        uses: Checkmarx/ast-github-action@8e887bb93dacc44e0f5b64ee2b06d5815f89d4fc
         with:
           # --- Auth & endpoint (OAuth) ---
           base_uri:       ${{ secrets.CX_BASE_URI }}
           cx_tenant:      ${{ secrets.CX_TENANT }}
           cx_client_id:   ${{ secrets.CX_CLIENT_ID }}
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          additional_params: --scan-types iac-security -s tfplan.json --report-format sarif --output-name cx-iac-plan.sarif --output-path .
 
           # --- Plan scan inputs ---
           project_name:   ${{ secrets.CX_PROJECT_NAME }}
-          branch:         ${{ github.head_ref }}
-          scan_types:     iac-security
-          file_source:    tfplan.json
 
           # --- Results output ---
           output_format:   sarif
