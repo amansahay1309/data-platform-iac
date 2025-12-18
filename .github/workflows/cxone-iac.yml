@@ -32,8 +32,9 @@ jobs:
           cx_tenant:      ${{ secrets.CX_TENANT }}
           cx_client_id:   ${{ secrets.CX_CLIENT_ID }}
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
-          additional_params: --scan-types iac-security -s . --report-format sarif --output-name cx-iac-source.sarif --output-path .
-
+          scan_types: iac-security
+          additional_params: -s . --report-format sarif --output-name cx-iac-source.sarif --output-path .
+          
           # --- Scan configuration ---
           project_name:   ${{ secrets.CX_PROJECT_NAME }}
           file_source:    .                  # scan repository root
