@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
+  issues: write
   security-events: write   # needed to upload SARIF
 
 jobs:
@@ -40,6 +42,9 @@ jobs:
           # --- Results output (for GitHub Code Scanning) ---
           output_format:   sarif
           output_filename: cx-iac-source.sarif
+      
+      - name: Verify SARIF exists
+        run: ls -la cx-iac-source.sarif || (echo "SARIF missing" && exit 1)
 
       - name: Upload SARIF (source)
         uses: github/codeql-action/upload-sarif@v4
@@ -95,6 +100,9 @@ jobs:
           # --- Results output ---
           output_format:   sarif
           output_filename: cx-iac-plan.sarif
+  
+      - name: Verify Plan SARIF exists
+        run: ls -la cx-iac-plan.sarif || (echo "Plan SARIF missing" && exit 1)
 
       - name: Upload SARIF (plan)
         uses: github/codeql-action/upload-sarif@v4
